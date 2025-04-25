@@ -48,7 +48,7 @@
       <p>For enhanced security, you can provide the URL of your iframe's main JavaScript file to generate its SHA-256 hash. Copy this hash and include it in the 'Additional Trusted Domains or Hashes' field above.</p>
       <label for="iframeScriptUrl">URL of your iframe's main JavaScript file:</label>
       <input type="url" id="iframeScriptUrl" placeholder="e.g., https://your-github-username.github.io/path/to/your-script.js">
-      <button type="button" onclick="generateScriptHash()">Generate SHA-256 Hash</button>
+      <button type="button" id="generateHashButton">Generate SHA-256 Hash</button>
       <textarea id="scriptHashOutput" rows="1" cols="60" readonly placeholder="SHA-256 Hash will appear here"></textarea>
     </div>
 
