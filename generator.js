@@ -27,7 +27,7 @@ function generateCSP() {
   const needsStyle = document.getElementById("needsStyle").value;
   const additionalDomainsAndHashes = document.getElementById("additionalDomains").value.split(',').map(d => d.trim()).filter(d => d !== '');
   const cspParts = [];
-  const yourDomain = 'https://your-github-username.github.io'; // Replace with your actual domain
+  const yourDomain = 'https://kurtastarita.github.io'; // Replace with your actual domain
 
   cspParts.push("default-src 'self';");
 
