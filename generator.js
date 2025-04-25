@@ -1,7 +1,7 @@
 async function generateScriptHash() {
   const scriptUrl = document.getElementById("iframeScriptUrl").value;
   if (!scriptUrl) {
-    document.getElementById("scriptHashOutput").value = "Please enter the URL of the script.";
+    document.getElementById("scriptHashOutput").value = "/generator.js"
     return;
   }
 
