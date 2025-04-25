@@ -17,14 +17,44 @@
   <p>Answer the following questions to generate a recommended Content Security Policy for the site where you will embed this iframe.</p>
 
   <form id="cspForm">
-    </form>
+    <div>
+      <label for="embeddingSiteUrl">What is the URL of the site where you will embed this iframe? (e.g., https://your-blog.com)</label>
+      <input type="url" id="embeddingSiteUrl" placeholder="Enter embedding site URL">
     </div>
 
+    <div>
+      <label for="needsScript">Does your embedded iframe require JavaScript to run?</label>
+      <select id="needsScript">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
     </div>
 
-     <button type="button" id="generateCSPButton">Generate CSP</button>
-
+    <div>
+      <label for="needsStyle">Does your embedded iframe use custom CSS?</label>
+      <select id="needsStyle">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
     </div>
+
+    <div>
+      <label for="additionalDomains">Additional Trusted Domains or Hashes (comma-separated, e.g., https://cdn.example.com, 'sha256-...')</label>
+      <textarea id="additionalDomains" placeholder="Enter additional trusted domains or script/style SHA-256 hashes"></textarea>
+    </div>
+
+    <div>
+      <h2>Generate SHA-256 Hash for Your Iframe's Script (Optional)</h2>
+      <p>For enhanced security, you can provide the URL of your iframe's main JavaScript file to generate its SHA-256 hash. Copy this hash and include it in the 'Additional Trusted Domains or Hashes' field above.</p>
+      <label for="iframeScriptUrl">URL of your iframe's main JavaScript file:</label>
+      <input type="url" id="iframeScriptUrl" placeholder="e.g., https://your-github-username.github.io/path/to/your-script.js">
+      <button type="button" onclick="generateScriptHash()">Generate SHA-256 Hash</button>
+      <textarea id="scriptHashOutput" rows="1" cols="60" readonly placeholder="SHA-256 Hash will appear here"></textarea>
+    </div>
+
+    <button type="button" id="generateCSPButton">Generate CSP</button>
+
+    <div>
       <h2>Generated Content Security Policy</h2>
       <textarea id="cspOutput" rows="8" cols="80" readonly></textarea>
       <p>Copy this CSP string and add it to your site's security settings (if applicable) or provide it to the platform where you are embedding the iframe.</p>
