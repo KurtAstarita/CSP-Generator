@@ -1,7 +1,14 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const generateButton = document.getElementById('generateCSPButton');
+  if (generateButton) {
+    generateButton.addEventListener('click', generateCSP);
+  }
+});
+
 async function generateScriptHash() {
   const scriptUrl = document.getElementById("iframeScriptUrl").value;
   if (!scriptUrl) {
-    document.getElementById("scriptHashOutput").value = "/generator.js"
+    document.getElementById("scriptHashOutput").value = "Please enter the URL of the script to generate its hash.";
     return;
   }
 
