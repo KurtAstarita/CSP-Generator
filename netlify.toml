@@ -1,5 +1,5 @@
 [[headers]]
   for = "/*"
     [headers.values]
-      Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-db9879e6ea14a35ed6e953cd3115f5e77f231ab5e3bc7fc836835f60450618c2'; style-src 'self' 'sha256-d58f64172ab5000aa5e16cca5caf17c98650764e60a7ab81c96300e3ec3a77f5'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests;"
+      Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-db9879e6ea14a35ed6e953cd3115f5e77f231ab5e3bc7fc836835f60450618c2'; style-src 'self' 'sha256-d58f64172ab5000aa5e16cca5caf17c98650764e60a7ab81c96300e3ec3a77f5' 'sha256-+OsIn6RhyCZCUkkvtHxFtP0kU3CGdGeLjDd9Fzqdl3o='; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests;"
       # Add other security headers if needed
