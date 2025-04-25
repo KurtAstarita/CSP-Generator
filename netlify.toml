@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Content-Security-Policy = "default-src 'self'; script-src 'self' 'YOUR_SCRIPT_HASH'; style-src 'self' 'YOUR_STYLE_HASH'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests;"
+      # Add other security headers if needed
